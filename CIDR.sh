@@ -60,10 +60,10 @@ ipaddr=$(host $domain | grep "has address" | cut -d" " -f4 | tr "\n" " ")
 
 # Available options
 echo -e "Additional options available:"
-echo -e "\t1) identify the corresponding netwrok range of target domain."
+echo -e "\t1) identify the corresponding network range of target domain."
 echo -e "\t2) Ping discovered hosts."
 echo -e "\t3) All checks."
-echot -e "\t*) Exi.\n"
+echo -e "\t*) Exit.\n"
 
 read -p "Select your option: " opt
 
