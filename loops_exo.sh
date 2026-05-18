@@ -35,10 +35,12 @@ hash="VTJGc2RHVmtYMTl2ZnYyNTdUeERVRnBtQWVGNmFWWVUySG1wTXNmRi9rQT0K"
 for i in {1..28}
 do
     printf "%s\n" "$i"
-    var=$(printf "%s" "$var" | base64)
+    var=$(echo $var | base64)
     if [ "$i" -eq 28 ]
     then 
-        salt=${#var}
+        salt=$(echo -e $var | wc -c)
+	#salt=${#var}
+	echo $salt
     fi
 done
 
